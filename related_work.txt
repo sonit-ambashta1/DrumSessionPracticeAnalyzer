@@ -1,0 +1,77 @@
+1. Virtual Drumset || Everest Hack 2019 || Team Ironman
+
+The project implements a virtual drumset using:
+
+Python
+OpenCV
+Color detection
+Region of Interest (ROI) tracking
+
+The user attaches:
+
+a red marker
+a blue marker
+
+to drumsticks or handheld objects.
+A webcam tracks the colored markers.
+Whenever a marker enters a predefined screen region, 
+the program triggers a corresponding drum sound.
+
+2. Hydrogen Drum Machine
+Project Summary
+Hydrogen is an open-source desktop application that functions as:
+
+Drum machine
+Pattern sequencer
+Drum sample player
+MIDI-capable rhythm workstation
+
+It allows users to:
+
+Create Patterns
+↓
+Arrange Songs
+↓
+Trigger Drum Samples
+↓
+Export / Perform
+
+Rather than analyzing a drummer, it is primarily a tool for generating drum performances.
+
+3. ADTLib (Automatic Drum Transcription Library)
+Project Summary
+ADTLib is an automatic drum transcription system designed to extract drum events from audio recordings.
+The library performs:
+
+Audio Recording
+        ↓
+Drum Onset Detection
+        ↓
+Instrument Identification
+        ↓
+Drum Tab Generation
+
+Outputs include:
+
+Kick drum events
+Snare drum events
+Hi-hat events
+Generated drum notation/tab
+
+4. GrooveToolbox
+Project Summary
+GrooveToolbox is a Python library for analyzing drum grooves.
+Rather than generating sounds or creating notation, it extracts:
+
+Rhythm Features
+Microtiming Features
+Similarity Metrics
+from drum performances.
+
+Inputs can come from:
+MIDI
+BFD Groove Files
+Audio (via ADTLib)
+
+The output consists of quantitative descriptions of grooves.
+

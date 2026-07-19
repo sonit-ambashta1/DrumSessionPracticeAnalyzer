@@ -1,0 +1,257 @@
+Drum Practice Session Analyzer
+Project Review Summary (v0.1)
+
+Project Goal
+------------
+The goal of the project is to analyze drum practice sessions and provide meaningful metrics, progress tracking, and feedback for drummers.
+
+The project is not intended to create music, simulate drums, or transcribe performances into notation alone. Instead, it focuses on understanding what happened during a practice session and helping users improve over time.
+
+Core Pipeline
+-------------
+Practice Session
+    ↓
+Audio and/or Video Input
+    ↓
+Hit/Event Detection
+    ↓
+Metric Extraction
+    ↓
+Session Analytics
+    ↓
+Feedback & Progress Tracking
+
+Key Project Insights
+--------------------
+
+1. Performance Analysis vs Technique Analysis
+
+Performance analysis focuses on measurable events such as:
+- BPM
+- Timing consistency
+- Practice duration
+- Session frequency
+- Hit counts
+
+Technique analysis focuses on:
+- Stick height
+- Wrist motion
+- Stroke consistency
+- Dynamics
+
+Technique analysis is much harder because context matters. Different stick heights or dynamic levels are not necessarily mistakes. Ghost notes, accents, crescendos, and other musical choices can intentionally create variation.
+
+2. Physical Kit Layout Does Not Equal Musical Meaning
+
+A physical pad or cymbal position does not always correspond to the same instrument.
+
+Example:
+- Crash cymbal may become a China cymbal.
+- Different drummers configure electronic kits differently.
+- Left-handed layouts exist.
+- Additional cymbals may be added.
+
+Therefore:
+
+Physical Object
+≠
+Musical Identity
+
+A future system may require user configuration rather than hard-coded assumptions.
+
+3. V1 Should Operate In A Controlled Environment
+
+Rather than supporting every drum kit and recording scenario immediately, start with:
+
+- Known drum setup
+- Known camera placement
+- Known audio conditions
+- Known kit configuration
+
+This reduces complexity and enables validation of the overall pipeline.
+
+Current Scope
+-------------
+
+Likely V1 Metrics:
+- Practice duration
+- Practice frequency
+- Sessions per week
+- Practice streaks
+- BPM estimation
+- Timing consistency
+- Session summaries
+
+Potential Future Metrics:
+- Groove comparison
+- Instrument usage
+- Motion analysis
+- Stick tracking
+- Dynamics analysis
+- Personalized feedback
+
+Current Risks
+-------------
+
+Audio Risks:
+- Biased recordings
+- Same room
+- Same drummer
+- Same microphone
+- Detector overfitting to sample recordings
+
+Video Risks:
+- Lighting changes
+- Occlusion
+- Similar colors in background
+- Drum kit variability
+
+Domain Risks:
+- Ghost notes versus mistakes
+- Accents versus inconsistency
+- Unknown musical intent
+- Different practice goals
+
+Related Work Survey
+-------------------
+
+1. Virtual Drumset (OpenCV Color Detection)
+
+Purpose:
+Generate drum sounds from camera input.
+
+Architecture:
+Camera
+↓
+Color Detection
+↓
+ROI Detection
+↓
+Sound Playback
+
+Observations:
+- Demonstrates color tracking and ROI-based triggering.
+- Useful OpenCV reference.
+- Focuses on creating drum sounds.
+- Does not perform performance analysis.
+
+Relevance:
+Useful for understanding color detection and object tracking.
+
+2. Hydrogen Drum Machine
+
+Purpose:
+Create and sequence drum performances.
+
+Architecture:
+Pattern Editor
+↓
+Sequencer
+↓
+Sample Playback
+
+Observations:
+- Professional drum software.
+- Supports MIDI and sequencing.
+- Useful reference for drum software architecture.
+- Not focused on analysis.
+
+Relevance:
+Useful for understanding drum software ecosystems and timing/event models.
+
+3. ADTLib (Automatic Drum Transcription Library)
+
+Purpose:
+Transcribe recorded drum performances.
+
+Architecture:
+Audio
+↓
+Drum Onset Detection
+↓
+Instrument Classification
+↓
+Drum Tab Generation
+
+Observations:
+- Detects kick, snare, and hi-hat.
+- Focuses on transcription.
+- Uses machine learning and MIR techniques.
+- Closest match to the audio analysis layer.
+
+Relevance:
+Highly relevant for event detection and drum transcription.
+
+4. GrooveToolbox
+
+Purpose:
+Analyze drum grooves.
+
+Architecture:
+Drum Events
+↓
+Rhythm Features
+↓
+Microtiming Features
+↓
+Similarity Metrics
+
+Observations:
+- Calculates rhythm features.
+- Calculates microtiming features.
+- Measures groove similarity.
+- Supports MIDI and transcription outputs.
+
+Relevance:
+Most relevant project discovered so far.
+
+Why:
+It begins moving beyond detection and transcription toward actual analysis and quantitative feature extraction.
+
+Relationship To My Project
+--------------------------
+
+Existing systems generally focus on:
+
+- Creating drum performances
+- Triggering drum sounds
+- Sequencing music
+- Transcribing performances
+
+My project aims to focus on:
+
+- Practice analytics
+- Session tracking
+- Progress measurement
+- Long-term improvement
+- Actionable feedback
+
+Potential Project Gap
+---------------------
+
+Current drum tools are strong at:
+
+- Performance creation
+- Event detection
+- Groove analysis
+
+There appears to be less focus on:
+
+- Practice session analysis
+- Skill development tracking
+- Personalized drum feedback
+- Longitudinal practice analytics
+
+The Drum Practice Session Analyzer aims to occupy this space.
+
+Current Conclusion
+------------------
+
+The strongest related project found so far is GrooveToolbox because it analyzes timing and rhythm features rather than merely generating or transcribing drum performances.
+
+The most important discoveries are:
+- Physical drum layouts are highly configurable.
+- Metrics are easier than feedback.
+- Performance analysis is easier than technique analysis.
+- Controlled assumptions are necessary for an initial version.
+- Practice analytics appears to be relatively underexplored compared to performance generation and transcription software.

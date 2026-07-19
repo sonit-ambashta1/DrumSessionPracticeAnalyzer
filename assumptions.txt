@@ -1,0 +1,20 @@
+v1
+- User is the dominant percussion source
+- Recording is drum-only or drum-dominant
+- Drumless backing tracks are allowed
+- Full commercial songs with drums are out of scope
+- Percussive hits produce detectable audio transients
+- Onset detection is sufficient
+- Instrument classification is unnecessary
+- Tempo is relatively stable (static throughout)
+- Time signature remains consistent
+- Recording quality is reasonable (no extreme distortion, clipping, or noise)
+- A single microphone/audio recording is sufficient
+- Audio is the primary input modality
+- MIDI support is deferred (although electric kits support MIDI, keeping consistent with the audio-only input modality is preferred
+and to account for acoustic kits)
+- Consistency is the core problem (how consistent is the drummer's performance with respect to timing)
+- Objective timing feedback is more important than complete transcription
+
+v2
+TBD
