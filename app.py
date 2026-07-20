@@ -26,26 +26,3 @@ if __name__=="__main__":
     
     # transform for time conversion
     
-    
-    # # Waveform
-    # plt.figure(figsize=(12, 4))
-    # librosa.display.waveshow(y, sr=sr)
-    # plt.title("Waveform")
-    # plt.savefig("waveform.png")
-    # plt.close()
-
-    # # Spectrogram
-    # D = librosa.stft(y)
-    # S_db = librosa.amplitude_to_db(np.abs(D), ref=np.max)
-
-    # plt.figure(figsize=(12, 6))
-    # librosa.display.specshow(
-    #     S_db,
-    #     sr=sr,
-    #     x_axis="time",
-    #     y_axis="log"
-    # )
-    # plt.colorbar(format="%+2.0f dB")
-    # plt.title("Spectrogram")
-    # plt.savefig("spectra.png")
-    # plt.close()
